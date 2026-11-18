@@ -1,0 +1,14 @@
+Addr  Code  Source
+00    A180  LDI R1, 128
+01    A2A7  LDI R2, 167
+02    A308  LDI R3, 8
+03    A401  LDI R4, 1
+04    D510  LDX R5, R1
+05    E520  STX R5, R2
+06    0140  ADD R1, R4
+07    1240  SUB R2, R4
+08    1340  SUB R3, R4
+09    5004  JNZ copy
+0A    A608  LDI R6, 8
+0B    C6FB  ST  R6, 251
+0C    9000  HLT

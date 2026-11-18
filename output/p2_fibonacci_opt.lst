@@ -1,0 +1,12 @@
+Addr  Code  Source
+00    A101  LDI R1, 1
+01    A201  LDI R2, 1
+02    A306  LDI R3, 6
+03    A402  LDI R4, 2
+04    1340  SUB R3, R4
+05    F520  MOV R5, R2
+06    0210  ADD R2, R1
+07    F150  MOV R1, R5
+08    8305  LOOP R3, again
+09    C2FA  ST  R2, 250
+0A    9000  HLT

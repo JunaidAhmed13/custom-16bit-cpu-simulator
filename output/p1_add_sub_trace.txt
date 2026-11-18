@@ -1,0 +1,25 @@
+Group 16   Abdul Wali 01-134242-007   Malik Junaid Ahmed 01-134242-061
+Opcode key K = 9   memory cost M = 3
+
+Step  PC  IR    Instruction        R0    R1    R2    R3    R4    R5    R6    R7  Z N  Cycles
+   1  00  B180  LD R1, 128          0     7     0     0     0     0     0     0  0 0       3
+   2  01  B281  LD R2, 129          0     7    61     0     0     0     0     0  0 0       6
+   3  02  F310  MOV R3, R1          0     7    61     7     0     0     0     0  0 0       7
+   4  03  0320  ADD R3, R2          0     7    61    68     0     0     0     0  0 0       8
+   5  04  C3C8  ST R3, 200          0     7    61    68     0     0     0     0  0 0      11
+   6  05  F410  MOV R4, R1          0     7    61    68     7     0     0     0  0 0      12
+   7  06  1420  SUB R4, R2          0     7    61    68   -54     0     0     0  0 1      13
+   8  07  C4C9  ST R4, 201          0     7    61    68   -54     0     0     0  0 1      16
+   9  08  9000  HLT                 0     7    61    68   -54     0     0     0  0 1      17
+
+Instructions executed: 9
+Total cycles:          17
+CPI:                   1.89
+Memory accesses:       4
+Instruction mix:       LD=2, MOV=2, ADD=1, ST=2, SUB=1, HLT=1
+
+Data memory (non zero):
+  mem[128] = 0007  (7)
+  mem[129] = 003D  (61)
+  mem[200] = 0044  (68)
+  mem[201] = FFCA  (-54)

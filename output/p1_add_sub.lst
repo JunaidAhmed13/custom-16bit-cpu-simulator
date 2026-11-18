@@ -1,0 +1,10 @@
+Addr  Code  Source
+00    B180  LD  R1, 128
+01    B281  LD  R2, 129
+02    F310  MOV R3, R1
+03    0320  ADD R3, R2
+04    C3C8  ST  R3, 200
+05    F410  MOV R4, R1
+06    1420  SUB R4, R2
+07    C4C9  ST  R4, 201
+08    9000  HLT

@@ -1,0 +1,36 @@
+Group 16   Abdul Wali 01-134242-007   Malik Junaid Ahmed 01-134242-061
+Opcode key K = 9   memory cost M = 3
+
+Step  PC  IR    Instruction        R0    R1    R2    R3    R4    R5    R6    R7  Z N  Cycles
+   1  00  A101  LDI R1, 1           0     1     0     0     0     0     0     0  0 0       1
+   2  01  A201  LDI R2, 1           0     1     1     0     0     0     0     0  0 0       2
+   3  02  A306  LDI R3, 6           0     1     1     6     0     0     0     0  0 0       3
+   4  03  A402  LDI R4, 2           0     1     1     6     2     0     0     0  0 0       4
+   5  04  1340  SUB R3, R4          0     1     1     4     2     0     0     0  0 0       5
+   6  05  F520  MOV R5, R2          0     1     1     4     2     1     0     0  0 0       6
+   7  06  0210  ADD R2, R1          0     1     2     4     2     1     0     0  0 0       7
+   8  07  F150  MOV R1, R5          0     1     2     4     2     1     0     0  0 0       8
+   9  08  8305  LOOP R3, 05         0     1     2     3     2     1     0     0  0 0      10
+  10  05  F520  MOV R5, R2          0     1     2     3     2     2     0     0  0 0      11
+  11  06  0210  ADD R2, R1          0     1     3     3     2     2     0     0  0 0      12
+  12  07  F150  MOV R1, R5          0     2     3     3     2     2     0     0  0 0      13
+  13  08  8305  LOOP R3, 05         0     2     3     2     2     2     0     0  0 0      15
+  14  05  F520  MOV R5, R2          0     2     3     2     2     3     0     0  0 0      16
+  15  06  0210  ADD R2, R1          0     2     5     2     2     3     0     0  0 0      17
+  16  07  F150  MOV R1, R5          0     3     5     2     2     3     0     0  0 0      18
+  17  08  8305  LOOP R3, 05         0     3     5     1     2     3     0     0  0 0      20
+  18  05  F520  MOV R5, R2          0     3     5     1     2     5     0     0  0 0      21
+  19  06  0210  ADD R2, R1          0     3     8     1     2     5     0     0  0 0      22
+  20  07  F150  MOV R1, R5          0     5     8     1     2     5     0     0  0 0      23
+  21  08  8305  LOOP R3, 05         0     5     8     0     2     5     0     0  0 0      24
+  22  09  C2FA  ST R2, 250          0     5     8     0     2     5     0     0  0 0      27
+  23  0A  9000  HLT                 0     5     8     0     2     5     0     0  0 0      28
+
+Instructions executed: 23
+Total cycles:          28
+CPI:                   1.22
+Memory accesses:       1
+Instruction mix:       LDI=4, SUB=1, MOV=8, ADD=4, LOOP=4, ST=1, HLT=1
+
+Data memory (non zero):
+  mem[250] = 0008  (8)

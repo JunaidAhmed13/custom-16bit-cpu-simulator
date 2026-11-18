@@ -1,0 +1,11 @@
+Addr  Code  Source
+00    A10C  LDI R1, 12
+01    A20A  LDI R2, 10
+02    7120  XOR R1, R2
+03    C1D2  ST  R1, 210
+04    7210  XOR R2, R1
+05    7120  XOR R1, R2
+06    C1D3  ST  R1, 211
+07    C2D4  ST  R2, 212
+08    7330  XOR R3, R3
+09    9000  HLT
